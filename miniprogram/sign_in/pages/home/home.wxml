@@ -1,0 +1,16 @@
+<!--sign_in/pages/home/home.wxml-->
+<text class="reason1">入校签到</text>
+<text>当前位置为：{{where}}</text>
+<button type="primary" form-type="submit"  bindtap="btnsub">获取当前位置</button>
+<checkbox-group bindchange="checkboxChange">
+  <checkbox value="true">我对提交的位置负责，保证为真实位置</checkbox>
+</checkbox-group>
+<button type="default" form-type="submit" wx:if="{{button == true}}" bindtap="btnsub2">提交</button>
+<text class="reason1">历史签到</text>
+
+<text class="right-align-text">
+  <text style="color: red; font-weight: bold;">*</text>
+  <text>签到信息每周日凌晨24时刷新</text>
+</text>
+
+
