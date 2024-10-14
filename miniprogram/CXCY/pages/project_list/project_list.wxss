@@ -1,0 +1,64 @@
+/* pages/project_list/project_list.wxss */
+.style{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-weight:700;
+  /*border-bottom: 2rpx solid #ccc;*/
+}
+
+.reason{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-weight:700;
+  font-size: 32rpx;
+  color: #333333;
+  display: table;
+  width: auto;
+  white-space: nowrap;
+  border-spacing: 0.5rem 0;
+  margin-left:28rpx;
+  margin-right:28rpx;
+}
+.reason::before,.reason::after{
+  display: table-cell;
+  content:"";
+  width :50%;
+  background:linear-gradient(#ccc,#ccc) repeat-x center;
+  background-size: 0.1rem 0.1rem;
+}
+
+.wop{
+  font-weight:700;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.row{ 
+  width:700rpx;
+  padding:30rpx 30rpx;
+  border-bottom: 1rpx solid #ccc;
+  background-color: rgb(234, 247, 234);
+}
+
+.button{
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 20rpx 40rpx;
+  margin-top: 40rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+}
+
+.button2{
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 20rpx 40rpx;
+  margin-top: 40rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+}
+
+
+
+

@@ -1,0 +1,7 @@
+/* pages/occupation/occupation.wxss */
+.face{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  width:200rpx;
+  height: 200rpx;
+}

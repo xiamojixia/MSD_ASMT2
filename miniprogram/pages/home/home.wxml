@@ -1,0 +1,18 @@
+<!--pages/home/home.wxml-->
+<!--轮播图区-->
+<swiper indicator-dots="{{indicators}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+  <block wx:for="{{imageUrl}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" mode="aspectFit" class="swiper-image"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<fBar id="f-bar" idx="0"></fBar>
+
+<!--六宫格区-->
+<view class="grid-list">
+  <view bindtap="ii" class="grid-item" wx:for="{{gridlist_pr}}"wx:key="index" data-hi="{{index}}">
+    <image src="{{item}}"></image>
+    <text>{{gridlist[index]}}</text>
+  </view>
+</view>

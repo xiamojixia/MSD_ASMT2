@@ -1,0 +1,19 @@
+/* pages/add/add.wxss */
+.row{ 
+  padding:30rpx 30rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

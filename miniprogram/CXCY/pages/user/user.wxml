@@ -1,0 +1,43 @@
+<!--pages/user/user.wxml-->
+<!--上部个人信息-->
+<view class="containter">
+  <view class="top">
+    <image src="{{picUrl}}"></image>
+    <button class="button1" size="mini" style="width:25vw" type="primary" bindtap="clickBtn">上传头像</button>
+  </view>
+  <view class="texts" wx:if="{{occupation == 'student'}}">
+    <view class="text">姓名：{{name}}{{ress.data[0].name}}</view>
+    <view class="text">性别：{{ress.data[0].gender}}</view>
+    <view class="text">年级：{{ress.data[0].grade}}</view>
+    <view class="text">学院：{{ress.data[0].college}}</view>
+    <button class="button2" size="mini" style="width:25vw" type="primary" bindtap="message">修改信息</button>
+  </view>
+  <view class="texts" wx:if="{{occupation == 'teacher'}}">
+    <view class="text">姓名：{{name}}{{ress.data[0].name}}</view>
+    <view class="text">性别：{{ress.data[0].gender}}</view>
+    <view class="text">专业：{{ress.data[0].grade}}</view>
+    <view class="text">学院：{{ress.data[0].college}}</view>
+    <button class="button2" size="mini" style="width:25vw" type="primary" bindtap="message">修改信息</button>
+  </view>
+</view>
+<view class="reason">个人简介：</view>
+<view class="intro">{{ress.data[0].intro}}</view>
+<!--负责项目分割线-->
+<text class="reason1">负责的项目</text>
+<navigator open-type="navigateTo" url="../pages/project_list/project_list?project_neme={{item.project_neme}}&project_id={{item._id}}"
+class="row" wx:for="{{datalist}}" wx:key="index">
+  <view class="title">项目名称：{{item.project_neme}}</view>
+</navigator>
+
+
+
+
+
+<!--参与项目分割线-->
+<text class="reason2">参与的项目</text>
+
+
+
+
+<button style="width: 40vw" type="primary" bindtap="out">登出账号</button>
+<fBar id="f-bar" idx="0"></fBar>

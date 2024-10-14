@@ -1,0 +1,10 @@
+/* pages/log_in/log_in.wxss */
+.face{
+  width:300rpx;
+  height: 300rpx;
+  margin: 300rpx auto 0;
+}
+
+.button{
+  margin: 30rpx auto 0;
+}

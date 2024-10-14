@@ -1,0 +1,86 @@
+{
+  "pages":[
+    "pages/londing/londing",
+    "pages/log_in/log_in",
+    "pages/occupation/occupation",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/try/try",
+    "pages/user/user"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1890ff",
+    "navigationBarTitleText": "校园服务平台",
+    "navigationBarTextStyle":"black"
+  },
+  "subPackages": [
+    {
+      "root": "PC",
+      "name": "PC",
+      "pages": [
+        "pages/index/index",
+        "pages/home_PC/home_PC"
+      ]
+    },{
+      "root": "CXCY",
+      "name": "CXCY",
+      "pages": [
+        "pages/index/index",
+        "pages/project/project",
+        "pages/home_CXCY/home_CXCY",
+        "pages/add/add",
+        "pages/user/user",
+        "pages/user_in/user_in",
+        "pages/project_list/project_list",
+        "pages/project_modification/project_modification",
+        "pages/project_list_in/project_list_in"
+      ]
+    },{
+      "root": "sign_in",
+      "name": "sign_in",
+      "pages": [
+        "pages/home/home"
+      ]
+    },{
+      "root":"leave",
+      "name":"leave",
+      "pages":[
+        "pages/home/home"
+      ]
+    },{
+      "root":"yx",
+      "name":"yx",
+      "pages":[
+        "pages/home/home"
+      ]
+    }
+  ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text":"首页",
+      "iconPath": "pages/images/tabs/gameblue.png",
+      "selectedIconPath": "pages/images/tabs/gamegreen.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text":"个人中心",
+      "iconPath": "pages/images/tabs/userblue.png",
+      "selectedIconPath": "pages/images/tabs/usergreen.png"
+    }]
+  },
+  "permission": {
+    "scope.userProfile": {
+      "desc": "你自定义的授权说明"
+    },
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于入校信息统计"
+  }
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+
+  
+}

@@ -1,0 +1,55 @@
+/* PC/pages/home_PC/home_PC.wxss */
+.picker{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 50rpx;
+}
+
+.reason1{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-weight:700;
+  font-size: 32rpx;
+  color: #333333;
+  display: table;
+  width: auto;
+  white-space: nowrap;
+  border-spacing: 0.5rem 0;
+  margin-left:28rpx;
+  margin-right:28rpx;
+}
+
+.reason1::before,.reason1::after{
+  display: table-cell;
+  content:"";
+  width :50%;
+  background:linear-gradient(#ccc,#ccc) repeat-x center;
+  background-size: 0.1rem 0.1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cell {
+  width: 90rpx;
+  height: 60rpx;
+  border: 2rpx solid #000;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30rpx; 
+}
+
+.header {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}

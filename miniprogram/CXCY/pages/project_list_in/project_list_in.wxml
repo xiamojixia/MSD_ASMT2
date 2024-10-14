@@ -1,0 +1,46 @@
+<!--pages/project_list_in/project_list_in.wxml-->
+<!--pages/user/user.wxml-->
+<!--上部个人信息-->
+<view class="containter">
+  <view class="top">
+    <image src="{{picUrl}}"></image>
+  </view>
+  <view wx:if="{{fule.occupation == 'student' || fule.project_leader == fule.project_people}}" class="texts">
+    <view class="text">姓名：{{name}}{{ress.data[0].name}}</view>
+    <view class="text">性别：{{ress.data[0].gender}}</view>
+    <view class="text">年级：{{ress.data[0].grade}}</view>
+    <view class="text">学院：{{ress.data[0].college}}</view>
+  </view>
+  <view wx:if="{{fule.occupation == 'teacher' || fule.project_teather == fule.project_people}}" class="texts">
+    <view class="text">姓名：{{name}}{{ress.data[0].name}}</view>
+    <view class="text">性别：{{ress.data[0].gender}}</view>
+    <view class="text">专业：{{ress.data[0].grade}}</view>
+    <view class="text">学院：{{ress.data[0].college}}</view>
+  </view>
+</view>
+
+<view wx:if="{{fule.project_leader == account || fule.project_teather == account}}" class="reason0">
+  <view>QQ: {{ress.data[0].QQ}}</view>
+  <view>微信：{{ress.data[0].wechat}}</view>
+  <view>电话： {{ress.data[0].phone}}</view>
+</view>
+<view class="reason">个人简介：</view>
+<view class="intro">{{ress.data[0].intro}}</view>
+<!--负责项目分割线-->
+<text class="reason1">负责的项目</text>
+<navigator open-type="navigateTo" url="/pages/project_list/project_list?project_neme={{datalist[index].project_neme}}&project_id={{datalist[index]._id}}"
+class="row" wx:for="{{datalist}}" wx:key="index">
+  <view class="title">项目名称：{{datalist[index].project_neme}}</view>
+</navigator>
+
+
+
+
+
+<!--参与项目分割线-->
+<text class="reason2">参与的项目</text>
+
+
+
+
+

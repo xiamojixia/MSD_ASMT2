@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+}
+
+.list {
+  width: 100%rpx;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ccc;
+  padding: 20rpx;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #f0f0f0;
+}
+
+.applicant-info {
+  display: none;
+}
+
+.info {
+  flex-grow: 1;
+  padding: 40rpx;
+}
+
+h2 {
+  margin-top: 0;
+}

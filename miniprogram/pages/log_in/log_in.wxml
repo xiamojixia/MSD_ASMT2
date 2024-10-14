@@ -1,0 +1,3 @@
+<!--pages/log_in/log_in.wxml-->
+<image class="face" src='/pages/images/tabs/log_in.png'></image>
+<button class="button" bindtap="login" type="primary">登录</button>

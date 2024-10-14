@@ -1,0 +1,15 @@
+<!--pages/occupation/occupation.wxml-->
+<form bindsubmit="btnsub">
+  <view>请登录</view>
+  <input name="name" placeholder="账号" ></input>
+  <input name="password" placeholder="密码" ></input>
+  <view class="page-section page-section-gap">
+        <radio-group class="group" bindchange="save">
+          <view class="label-2" wx:for="{{items}}" wx:key="index">
+            <radio id="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}" range="{{array}}"></radio>
+            <label class="label-2-text" for="{{item.name}}"><text>{{item.name}}</text></label>
+          </view>
+        </radio-group>
+  </view>
+  <button form-type="submit" type="primary">登录</button>
+</form>

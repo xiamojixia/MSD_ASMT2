@@ -1,0 +1,87 @@
+<!--pages/project_list/project_list.wxml-->
+<view class="style">
+  <view>项目名称：</view>
+  <view>{{query}}</view>
+</view>
+
+<view>
+  <text class="reason">项目细节</text>
+  <view class="wop">所属学院：{{list2.project_college}}</view>
+  <view class="wop">项目简介：</view>
+  <view>{{list2.project_introduction}}</view>
+  <view class="wop">项目需求：</view>
+  <view>{{list2.project_need}}</view>
+  <text class="reason">项目人员</text>
+  <view class="wop">项目负责人：</view>
+  <navigator open-type="navigateTo" url="/pages/project_list_in/project_list_in?project_leader={{list2.project_leader[0]}}&project_teather={{list2.project_teather[0]}}&project_people={{list2.project_leader[0]}}" class="row"
+  >
+    <view>{{list2.project_leader[1]}}</view>
+  </navigator>
+  <view class="wop">项目成员:</view>
+  <view class="container">
+    <block wx:for="{{list2.project_member}}" wx:key="index">
+      <view>
+        <view class="row" bindtap="showApplicantInfo" data-index="{{list2.project_member[index][0]}}" data-occupation="student">{{list2.project_member[index][1]}}</view>
+      </view>
+    </block>
+  </view>
+
+
+
+  
+  <view class="wop">第一指导老师:</view>
+  <navigator open-type="navigateTo" url="/pages/project_list_in/project_list_in?project_leader={{list2.project_leader[0]}}&project_teather={{list2.project_teather[0]}}&project_people={{list2.project_teather[0]}}" class="row"
+  >
+    <view>{{list2.project_teather[1]}}</view>
+  </navigator>
+  <view class="wop">指导老师:</view>
+  <view class="container">
+    <block wx:for="{{list2.project_teathers}}" wx:key="index">
+      <view>
+        <view class="row" bindtap="showApplicantInfo" data-index="{{list2.project_teathers[index][0]}}" data-occupation="teacher">{{list2.project_teathers[index][1]}}</view>
+      </view>
+    </block>
+  </view>
+
+
+
+</view>
+
+<button type="primary" bindtap="join" style="display: {{none_btn}}">申请加入</button> 
+
+<!--判断是否是项目负责人或者是第一指导老师-->
+<view style="display: {{none_leader}}">
+<view wx:if="{{teathers.length > 0 || students.length > 0}}">
+  <text class="reason" >申请列表</text>
+  <view wx:if="{{teathers.length > 0}}">
+    <text class="reason">老师</text>
+  <view class="container">
+    <block wx:for="{{teathers}}" wx:key="index">
+      <view>
+        <view class="applicant" bindtap="showApplicantInfo" data-index="{{index}}">{{teathers[index][1]}}</view>
+        <button bindtap="approveApplication_teather" data-index="{{index}}" type="primary" >同意
+        </button>
+      </view>
+    </block>
+  </view>
+  </view>
+
+  <view wx:if="{{students.length > 0}}">
+  <text class="reason">同学</text>
+  <view class="container">
+    <block wx:for="{{students}}" wx:key="index">
+      <view>
+        <view class="applicant" bindtap="showApplicantInfo" data-index="{{index}}">{{students[index][1]}}</view>
+        <button bindtap="approveApplication_student" data-index="{{index}}" type="primary" >同意
+        </button>
+      </view>
+    </block>
+  </view>
+  </view>
+</view>
+<button class="button" bindtap="modification">修改项目信息</button>
+
+<button class="button2" bindtap="delete">删除项目</button>
+</view>
+
+

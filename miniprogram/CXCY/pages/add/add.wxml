@@ -1,0 +1,26 @@
+<!--pages/add/add.wxml-->
+<form bindsubmit="btnsub">
+  <input class="row" name="project_neme" placeholder="请输入项目名称"></input>
+  <view>请选择项目所属学院</view>
+  <picker class="row" bindchange="bindPickercollege" value="{{index3}}" range="{{college}}">
+    <view>{{college[index3]}}</view>
+  </picker>
+  <textarea class="row" name="project_introduction" placeholder="请输入项目简介"></textarea>
+  <textarea class="row" name="project_need" placeholder="请输入项目需求"></textarea>
+  <button type="primary" form-type="submit">提交</button>
+  <button form-type="reset">重置</button>
+</form>
+
+<!-------
+<searchbar bindsearchinput="onSearchInputEvent"></searchbar>
+<view class='item-list-group'>
+  <view wx:for="{{subjects}}" class='item-group' wx:key="{{item.id}}" bindtap="onItemTapEvent" data-id="{{item.id}}" data-title="{{item.title}}">
+    <image src='{{item.pic.normal}}' class='thumbnail'></image>
+    <view class='info-group'>
+      <view class='title'>{{item.title}}</view>
+      <view class='rate-year'>{{item.rating.value}}分/{{item.year}}</view>
+    </view>
+  </view>
+</view>
+-->
+<fBar id="f-bar" idx="0"></fBar>

@@ -1,0 +1,42 @@
+/* leave/pages/home/home.wxss */
+/* 统一全局字体和边距 */
+.page {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+/* 标题样式 */
+.title {
+  font-size: 20px; /* 缩小标题字体 */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 段落样式 */
+.paragraph {
+  font-size: 14px; /* 缩小段落字体 */
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* 列表样式 */
+.list-item {
+  font-size: 14px; /* 缩小列表项字体 */
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* 确认样式 */
+.confirmation {
+  font-size: 14px; /* 缩小确认信息字体 */
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* 注意事项样式 */
+.note {
+  font-size: 14px; /* 缩小注意事项字体 */
+  color: #ff0000;
+  margin-top: 15px;
+}

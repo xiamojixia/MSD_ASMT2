@@ -1,0 +1,38 @@
+<!--pages/project_modification/project_modification.wxml-->
+
+<form bindsubmit="btnsub">
+  <input class="row" name="project_neme" placeholder="请输入项目名称" value="{{information.data[0].project_neme}}"></input>
+  <view>请选择项目所属学院:</view>
+  <picker class="row" bindchange="bindPickercollege" value="{{index3}}" range="{{college}}">
+    <view>{{college[index3]}}</view>
+  </picker>
+  <textarea class="row" name="project_introduction" placeholder="请输入项目简介" value="{{information.data[0].project_introduction}}"></textarea>
+  <textarea class="row" name="project_need" placeholder="请输入项目需求" value="{{information.data[0].project_need}}"></textarea>
+  <button type="primary" form-type="submit">提交</button>
+
+
+
+  <text class="reason">项目成员</text>
+  <view class="container">
+    <block wx:for="{{information.data[0].project_member}}" wx:key="index">
+      <view class="tap-group">
+        <view class="tap-item" bindtap="showApplicantInfo" data-index="{{information.data[0].project_member[index][0]}}">{{information.data[0].project_member[index][1]}}</view>
+        <view class="tap-item" bindtap="lender" data-name='{{information.data[0].project_member[index][1]}}' data-id='{{index}}'>设为项目负责人</view>
+        <view class="tap-item" bindtap="delete_student" data-name='{{information.data[0].project_member[index][1]}}' data-id='{{index}}'>删除该同学</view>
+      </view>
+    </block>
+  </view>
+
+
+
+  <text class="reason">指导老师</text>
+  <view class="container">
+    <block wx:for="{{information.data[0].project_teathers}}" wx:key="index">
+      <view class="tap-group">
+        <view class="tap-item" bindtap="showApplicantInfo" data-index="{{information.data[0].project_teathers[index][0]}}">{{information.data[0].project_teathers[index][1]}}</view>
+        <view class="tap-item" bindtap="teacher" data-name='{{information.data[0].project_teathers[index][1]}}' data-id='{{index}}'>设为第一指导老师</view>
+        <view class="tap-item" bindtap="delete_teather" data-name='{{information.data[0].project_teathers[index][1]}}' data-id='{{index}}'>删除该老师</view>
+      </view>
+    </block>
+  </view>
+</form>

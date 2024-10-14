@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "创新创业平台",
+  "onReachBottomDistance": 330,
+  "enablePullDownRefresh": false,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "fBar": "../../components/CYCX_TABBER/CYCX_TABBER"
+  }
+}

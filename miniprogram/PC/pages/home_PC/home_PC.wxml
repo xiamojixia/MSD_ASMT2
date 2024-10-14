@@ -1,0 +1,70 @@
+<!--PC/pages/home_PC/home_PC.wxml-->
+<text class="container">已预约时间{{}}</text>
+
+
+<view class="table">
+  <view class="row header">
+    <block wx:for="{{[sport[index2],'周一', '周二', '周三', '周四', '周五', '周六', '周日']}}">
+      <text class="cell header">{{item}}</text>
+      
+    </block>
+  </view>
+
+  <block wx:for="{{['一号场', '二号场', '三号场', '四号场', '五号场', '六号场', '七号场', '八号场']}}" wx:key="index" data-index="{{index}}">
+    <view class="row">
+      <text class="cell">{{item}}</text>
+      <block wx:for="{{newlist[index]}}">
+        <text class="cell" wx:if="{{item == 2}}" style="background-color: green;"></text>
+        <text class="cell" wx:if="{{item == 1}}" style="background-color: yellow;"></text>
+        <text class="cell" wx:if="{{item == 0}}" style="background-color: red;"></text>
+      </block>
+    </view>
+  </block>
+</view>
+
+
+
+<view class="section">
+
+  <picker bindchange="sportChange" value="{{index2}}" range="{{sport}}">
+      <view class="picker">
+      <view class="reason1">请选择体育项目</view>
+        当前选择：{{sport[index2]}}
+      </view>
+    </picker>
+
+
+  <view>
+    <picker bindchange="weekChange" value="{{index1}}" range="{{week}}">
+    <view class="picker">
+    <view class="reason1" if="fales">请选择星期</view>
+      当前选择：{{week[index1]}}
+    </view>
+  </picker>
+  </view>
+
+
+  <view>
+    <picker bindchange="whereChange" value="{{index3}}" range="{{where}}">
+      <view class="picker">
+      <view class="reason1">请选择场地</view>
+        当前选择：{{where[index3]}}
+      </view>
+    </picker>
+  </view>
+
+
+  <view>
+    <picker bindchange="timeChange" value="{{index4}}" range="{{time}}">
+      <view class="picker">
+      <view class="reason1">请选择时间</view>
+        当前选择：{{time[index4]}}
+      </view>
+    </picker>
+  </view>
+
+  
+  <view wx:if="{{time != 0 && index4 != 10}}">
+    <button type="primary" bindtap="button">确定</button>
+  </view>
+</view>

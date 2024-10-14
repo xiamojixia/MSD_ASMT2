@@ -1,0 +1,31 @@
+<!--leave/pages/home/home.wxml-->
+<view class="form-section">
+  <view class="label">请假事由</view>
+  <input class="input-field" placeholder="请输入请假事由" />
+
+  <view class="label">请假去向</view>
+  <input class="input-field" placeholder="请输入请假去向" />
+  
+  <view class="label">请假时间</view>
+  <input class="input-field" type="date" placeholder="开始时间" />
+  <input class="input-field" type="date" placeholder="结束时间" />
+</view>
+
+
+
+<view class="page">
+  <view class="title">请假说明</view>
+  
+  <view class="paragraph">
+    <view class="list">
+      <view class="list-item">因病请假须出具校卫生所或二级以上医院的诊断证明；因公请假必须出具活动主办单位提供的证明；因私请假须出具家长身份证件及知情同意书。</view>
+      <view class="list-item">请假三天以内由任课教师、班主任和辅导员审批；三天以上至一周以内须逐级上报至分管学生工作副书记审批；请假一周以上须逐级上报至学院院长审批。</view>
+      <view class="list-item">请事假三天（含三天）以上须出具家长身份证明及知情同意书；请病假一周（含一周）以上须出具家长身份证明及知情同意书。</view>
+      <view class="list-item">以上相应支撑材料与该“审批表”一同提交。</view>
+      <view class="list-item">请假人在请假期间注意人身和财产安全，原则上在请假离校期间的一切安全责任由学生本人及监护人负责。</view>
+      <view class="list-item">返校后须本人到学院销假，超过请假期限须续假，否则以旷课（缺考）论处。</view>
+      <view class="list-item">请假人请假期间安排好自己的学习、生活，遵守校纪校规和国家法律，不得做任何有损学院和国家荣誉的事，违者按学校有关规定或送交司法机关处理。</view>
+    </view>
+  </view>
+  <view class="confirmation">本人确认所提供支撑材料均真实有效</view>
+</view>

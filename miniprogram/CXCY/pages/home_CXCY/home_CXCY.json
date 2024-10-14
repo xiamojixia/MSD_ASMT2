@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "创新创业平台",
+  "backgroundColor": "#efefef",
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 330,
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fBar": "../../components/CYCX_TABBER/CYCX_TABBER"
+  }
+}
